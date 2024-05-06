@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fryzjerstwo</title>
+</head>
+    <body>
+        <main>
+            <div class="Lewo">
+
+                <div class="Lewoblok1">
+
+                        <h1><a href="index.html">SALON FRYZJERSKI</a></h1>
+
+                </div>
+
+                <div class="Lewoblok2">
+
+                <h2>Promocja!</h2>
+
+                <p><input type="radio" id="krotkie" name="kropki">Krótkie</p>
+                <p><input type="radio" id="srednie" name="kropki">Średnie</p>
+                <p><input type="radio" id="poldlugie" name="kropki">Półdługie</p>
+                <p><input type="radio" id="dlugie" name="kropki">Długie</p>
+
+                <button onclick="obliczanie()">Odkryj promocję</button>
+
+                    <div id="wynik"></div>
+
+                </div>
+
+            </div>
+
+            <div class="Prawo">
+
+                <div class="Prawoblok1">
+                    <div class="nagłowek"><a href="fryzura.html"><h4>Ceny strzyżenia</h4></a></div>
+                    <table>
+                        <tr>
+                            <th><b>Długość włosów</b></th>
+                            <th><b>Cena</b></th>
+                        </tr>
+                        <tr>
+                            <th><p>Krótkie</p></th>
+                            <th><p>25</p></th>
+                        </tr>
+                        <tr>
+                            <th><p>Średnie</p></th>
+                            <th><p>30</p></th>
+                        </tr>
+                        <tr>
+                            <th><p>Półdługie</p></th>
+                            <th><p>40</p></th>
+                        </tr>
+                        <tr>
+                            <th><p>Długie</p></th>
+                            <th><p>50</p></th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="Prawoblok2"><img src="ZedytowanyObraz1.jpg" class="obraz1">
+                </div>
+                
+            </div>
+        </main>
+        <footer><p>Autor 00000000000</p></footer>
+
+        <script>
+            function obliczanie(){
+
+                let krotkie = document.getElementById("krotkie");
+                let srednie = document.getElementById("srednie");
+                let poldlugie = document.getElementById("poldlugie");
+                let dlugie = document.getElementById("dlugie");
+
+            
+            if(krotkie.checked==true){
+                let p = 25 - 10;
+                document.getElementById("wynik").innerHTML = "<p> Cena promocyjna = " + p + "</p>";
+            }
+
+            if(srednie.checked==true){
+                let p2 = 30 - 10;
+                document.getElementById("wynik").innerHTML = "<p> Cena promocyjna = " + p2 + "</p>";
+            }
+            
+            if(poldlugie.checked==true){
+                let p3 = 40 - 10;
+                document.getElementById("wynik").innerHTML = "<p> Cena promocyjna = " + p3 + "</p>";
+            }
+            
+            if(dlugie.checked==true){
+                let p4 = 50 - 10;
+                document.getElementById("wynik").innerHTML = "<p> Cena promocyjna = " + p4 + "</p>";
+            }
+        }
+
+            
+        </script>
+
+    </body>
+</html>
